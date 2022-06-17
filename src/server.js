@@ -13,6 +13,7 @@ import Pusher from "pusher";
 Grid.mongo = mongoose.mongo
 const app = express()
 const port = process.env.PORT || 9000
+const connection_url = 'mongodb+srv://eagboka:azerty123@socialappmerncluster0.aqsrj.mongodb.net/?retryWrites=true&w=majority'
 
 //middleware
 app.use(bodyParser.json())
