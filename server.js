@@ -6,6 +6,7 @@ const cors = require('cors');
 const fileUpload = require('express-fileupload')
 
 const gridfsRouter = require('./routes/gridfs')
+const postRouter = require('./routes/post');
 
 
 const port = process.env.PORT || 9000;
@@ -32,6 +33,7 @@ app.use(cors())
 
 // routes
 app.use('/api', gridfsRouter)
+app.use('/api', postRouter)
 
 // listen
 app.listen(port, () => console.log(`Listening on localhost: ${port}`))
